@@ -50,10 +50,50 @@
                     <connections>
                         <outlet property="collectionView" destination="ua3-Hp-xIP" id="wJi-mk-YbP"/>
                         <outlet property="layout" destination="xm5-a1-ihN" id="dNg-Rx-PmU"/>
+                        <segue destination="3EH-OL-N5g" kind="show" identifier="details" id="bl9-zn-nXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121" y="-66"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="jHf-xY-tFv">
+            <objects>
+                <viewController id="3EH-OL-N5g" customClass="DetailsViewController" customModule="DribbleClient" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UVK-XD-Uha"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kyz-hb-ili"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KNj-jZ-tEt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="av9-r0-qZQ">
+                                <rect key="frame" x="0.0" y="152" width="600" height="440"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-TQ-rQ6">
+                                <rect key="frame" x="30" y="41" width="122" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.8249468485" blue="0.2690468063" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goHome:" destination="3EH-OL-N5g" eventType="touchUpInside" id="htJ-QU-nX8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="a3l-TQ-rQ6" id="0IL-T9-3CO"/>
+                        <outlet property="shotImage" destination="av9-r0-qZQ" id="3LE-2h-ass"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="backToHome" id="eVp-ax-Eab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HUZ-l6-m7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="-513"/>
         </scene>
     </scenes>
 </document>

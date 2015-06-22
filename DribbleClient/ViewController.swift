@@ -63,6 +63,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if(segue.identifier == "details"){
+            
+            let selectedItems = collectionView.indexPathsForSelectedItems()
+            
+            let selectedIndexPath = selectedItems[0] as NSIndexPath
+            
+            let shot = shots[selectedIndexPath.row]
+            
+            let controller = segue.destinationViewController as DetailsViewController
+            
+            controller.shotObj = shot
+            
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()

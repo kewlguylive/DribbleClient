@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>37137EF8-5A50-451D-AE42-A894B4672EFF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DribbleClient</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AB784BA51514075D097A3055B49F425CC0ADC6C8</key>
+		<string>https://github.com/kewlguylive/DribbleClient.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DribbleClient.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AB784BA51514075D097A3055B49F425CC0ADC6C8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kewlguylive/DribbleClient.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AB784BA51514075D097A3055B49F425CC0ADC6C8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AB784BA51514075D097A3055B49F425CC0ADC6C8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DribbleClient</string>
+		</dict>
+	</array>
+</dict>
+</plist>

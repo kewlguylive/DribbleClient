@@ -17,6 +17,7 @@
 		A3003AFD1B37A2BC0074C76C /* Dribble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3003AFC1B37A2BC0074C76C /* Dribble.swift */; };
 		A3003AFF1B37A3550074C76C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3003AFE1B37A3550074C76C /* Utils.swift */; };
 		A3003B011B37A4490074C76C /* ShotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3003B001B37A4490074C76C /* ShotCell.swift */; };
+		A3003B031B37B3470074C76C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3003B021B37B3470074C76C /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A3003AFC1B37A2BC0074C76C /* Dribble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dribble.swift; sourceTree = "<group>"; };
 		A3003AFE1B37A3550074C76C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A3003B001B37A4490074C76C /* ShotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShotCell.swift; sourceTree = "<group>"; };
+		A3003B021B37B3470074C76C /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				A3003B001B37A4490074C76C /* ShotCell.swift */,
 				A3003AFE1B37A3550074C76C /* Utils.swift */,
 				A3003AFC1B37A2BC0074C76C /* Dribble.swift */,
+				A3003B021B37B3470074C76C /* DetailsViewController.swift */,
 				A3003ADC1B379B6C0074C76C /* ViewController.swift */,
 				A3003ADE1B379B6C0074C76C /* Main.storyboard */,
 				A3003AE11B379B6C0074C76C /* Images.xcassets */,
@@ -228,6 +231,7 @@
 				A3003B011B37A4490074C76C /* ShotCell.swift in Sources */,
 				A3003AFD1B37A2BC0074C76C /* Dribble.swift in Sources */,
 				A3003AFB1B37A0D10074C76C /* Shot.swift in Sources */,
+				A3003B031B37B3470074C76C /* DetailsViewController.swift in Sources */,
 				A3003ADD1B379B6C0074C76C /* ViewController.swift in Sources */,
 				A3003ADB1B379B6C0074C76C /* AppDelegate.swift in Sources */,
 			);

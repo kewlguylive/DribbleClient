@@ -1,38 +1,29 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  DribbleClient
 //
-//  Created by preetham uppu on 6/21/15.
+//  Created by preetham uppu on 6/23/15.
 //  Copyright (c) 2015 preetham uppu. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-   
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var layout: UICollectionViewFlowLayout!
+class MainViewController : UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    @IBOutlet var collectionView : UICollectionView!
+    @IBOutlet var layout : UICollectionViewFlowLayout!
     
     var shots : [Shot]!
     var cellHeight : CGFloat = 240
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        title = "Shots"
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         collectionView.backgroundColor = UIColor.clearColor()
-        
-        /*
-        let cellWidth = calcCellWidth(self.view.frame.size)
-    
-        layout.sectionInset = UIEdgeInsetsMake(2,3,3,35);
-        
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        */
         
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
@@ -42,16 +33,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         shots = [Shot]()
         let api = Dribble()
-        
         api.loadShots("https://api.dribbble.com/v1/shots", completion: didLoadShots)
-        
     }
     
     func didLoadShots(shots: [Shot]){
-        
         self.shots = shots
         collectionView.reloadData()
-        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -60,32 +47,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let shot = shots[indexPath.row]
         
-        Utils.asyncLoadShotImage(shot,imageView: cell.coverImageView)
+        cell.titleLabel.text = shot.title
+        cell.nameLabel.text = "Test"
+        Utils.asyncLoadShotImage(shot, imageView: cell.coverImageView)
         
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return shots.count
-        
     }
-    
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         performSegueWithIdentifier("details", sender: self)
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if(segue.identifier == "details"){
             
             let selectedItems = collectionView.indexPathsForSelectedItems()
             
             let selectedIndexPath = selectedItems[0] as NSIndexPath
-            
             let shot = shots[selectedIndexPath.row]
             
             let controller = segue.destinationViewController as DetailsViewController
@@ -93,9 +76,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             controller.shotObj = shot
             
         }
-        
     }
-   
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         
@@ -113,14 +94,4 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return cellWidth
     }
-    
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-        
-        // Dispose of any resources that can be recreated.
-        
-    }
-
 }
-

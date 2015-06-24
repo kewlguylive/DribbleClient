@@ -11,16 +11,21 @@ import UIKit
 
 class ShotCell : UICollectionViewCell {
   
-    @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet var coverImageView : UIImageView!
+    @IBOutlet var nameLabel : UILabel!
+    @IBOutlet var titleLabel : UILabel!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
         
-      //  coverImageView.layer.borderColor = UIColor(white: 0.2, alpha: 1.0).CGColor
+        nameLabel.textColor = UIColor.blackColor()
+        //nameLabel.font = UIFont(name: MegaTheme.fontName, size: 14)
         
-       coverImageView.layer.borderWidth = 0.5
+        titleLabel.textColor = UIColor(white: 0.45, alpha: 1.0)
+        //titleLabel.font = UIFont(name: MegaTheme.fontName, size: 11)
         
-    }
+        coverImageView.layer.borderColor = UIColor(white: 0.2, alpha: 1.0).CGColor
+        coverImageView.layer.borderWidth = 0.5
     
+  }
 }
